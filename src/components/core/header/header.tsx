@@ -3,7 +3,6 @@
 import { Menu } from 'lucide-react'
 import Image from 'next/image'
 import Link from 'next/link'
-import { useState } from 'react'
 
 import {
   Sheet,
@@ -12,16 +11,23 @@ import {
   SheetTitle,
   SheetTrigger,
 } from '@/components/ui/sheet'
+import { useLanguage } from '@/lib/i18n/language-context'
 
 import { LanguageSwitcher } from '../language-switcher/language-switcher'
 
 export const Header = () => {
-  const [currentFlag, setCurrentFlag] = useState('/flags/us.svg')
+  const { locale, dictionary } = useLanguage()
+  const navSection = dictionary.nav
+
+  // Get the base path without the locale prefix
+  const getLocalizedPath = (path: string) => {
+    return `/${locale}${path === '/' ? '' : path}`
+  }
 
   return (
     <header className="bg-background/80 sticky top-0 z-40 w-full border-b backdrop-blur-sm transition-colors duration-200">
       <div className="c-container flex h-16 items-center justify-between py-4">
-        <Link href="/" className="flex items-center gap-2">
+        <Link href={getLocalizedPath('/')} className="flex items-center gap-2">
           <div className="relative h-12 w-12">
             <Image
               src="/ghibli-logo.png"
@@ -39,43 +45,37 @@ export const Header = () => {
         <div className="hidden items-center gap-8 md:flex">
           <nav className="flex items-center gap-8 text-base">
             <Link
-              href="/"
+              href={getLocalizedPath('/')}
               className="hover:text-primary font-medium text-gray-800 transition-colors"
             >
-              Home
+              {navSection.home}
             </Link>
             <Link
-              href="/filmes"
+              href={getLocalizedPath('/filmes')}
               className="hover:text-primary font-medium text-gray-800 transition-colors"
             >
-              Films
+              {navSection.films}
             </Link>
             <Link
-              href="/characters"
+              href={getLocalizedPath('/characters')}
               className="hover:text-primary font-medium text-gray-800 transition-colors"
             >
-              Characters
+              {navSection.characters}
             </Link>
             <Link
-              href="/about"
+              href={getLocalizedPath('/about')}
               className="hover:text-primary font-medium text-gray-800 transition-colors"
             >
-              About
+              {navSection.about}
             </Link>
           </nav>
 
-          <LanguageSwitcher
-            currentFlag={currentFlag}
-            setCurrentFlag={setCurrentFlag}
-          />
+          <LanguageSwitcher />
         </div>
 
         {/* Mobile Menu */}
         <div className="flex items-center gap-4 md:hidden">
-          <LanguageSwitcher
-            currentFlag={currentFlag}
-            setCurrentFlag={setCurrentFlag}
-          />
+          <LanguageSwitcher />
 
           <Sheet>
             <SheetTrigger className="text-gray-800" aria-label="Open menu">
@@ -87,28 +87,28 @@ export const Header = () => {
               </SheetHeader>
               <nav className="flex flex-col p-4">
                 <Link
-                  href="/"
+                  href={getLocalizedPath('/')}
                   className="hover:text-primary py-2 text-base font-medium text-gray-800 transition-colors"
                 >
-                  Home
+                  {navSection.home}
                 </Link>
                 <Link
-                  href="/filmes"
+                  href={getLocalizedPath('/filmes')}
                   className="hover:text-primary py-2 text-base font-medium text-gray-800 transition-colors"
                 >
-                  Films
+                  {navSection.films}
                 </Link>
                 <Link
-                  href="/characters"
+                  href={getLocalizedPath('/characters')}
                   className="hover:text-primary py-2 text-base font-medium text-gray-800 transition-colors"
                 >
-                  Characters
+                  {navSection.characters}
                 </Link>
                 <Link
-                  href="/about"
+                  href={getLocalizedPath('/about')}
                   className="hover:text-primary py-2 text-base font-medium text-gray-800 transition-colors"
                 >
-                  About
+                  {navSection.about}
                 </Link>
               </nav>
             </SheetContent>

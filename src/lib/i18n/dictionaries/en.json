@@ -1,0 +1,19 @@
+{
+  "metadata": {
+    "title": "Ghibli Wiki",
+    "description": "Explore the magical world of Studio Ghibli films, with their charming characters, stunning landscapes, and exciting stories that captivated audiences worldwide."
+  },
+  "nav": {
+    "home": "Home",
+    "films": "Films",
+    "characters": "Characters",
+    "about": "About"
+  },
+  "hero": {
+    "title": "Ghibli Wiki",
+    "description": "Discover the magical world of Studio Ghibli films, with their charming characters, stunning landscapes, and exciting stories that captivated audiences worldwide."
+  },
+  "films": {
+    "collection": "Films Collection"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "metadata": {
+    "title": "Ghibli Wiki",
+    "description": "Explore o mundo mágico dos filmes do Studio Ghibli, com seus personagens encantadores, paisagens deslumbrantes e histórias emocionantes."
+  },
+  "nav": {
+    "home": "Início",
+    "films": "Filmes",
+    "characters": "Personagens",
+    "about": "Sobre"
+  },
+  "hero": {
+    "title": "Ghibli Wiki",
+    "description": "Descubra o mundo mágico dos filmes do Studio Ghibli, com seus personagens encantadores, paisagens deslumbrantes e histórias emocionantes que cativaram o público em todo o mundo."
+  },
+  "films": {
+    "collection": "Coleção de Filmes"
+  }
+}

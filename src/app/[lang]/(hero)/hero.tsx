@@ -1,6 +1,13 @@
+'use client'
+
 import Image from 'next/image'
 
+import { useLanguage } from '@/lib/i18n/language-context'
+
 export function Hero() {
+  const { dictionary } = useLanguage()
+  const heroSection = dictionary.hero
+
   return (
     <section className="mb-8 flex flex-col items-center justify-center gap-4 px-4 text-center md:mb-16 md:gap-6 md:px-0">
       <div className="relative h-24 w-full sm:h-28 md:h-40 lg:h-48">
@@ -13,12 +20,10 @@ export function Hero() {
         />
       </div>
       <h1 className="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl md:text-5xl lg:text-6xl">
-        Ghibli Wiki
+        {heroSection.title}
       </h1>
       <p className="max-w-3xl text-base text-gray-600 sm:text-lg md:text-xl">
-        Discover the magical world of Studio Ghibli films, with their charming
-        characters, stunning landscapes, and exciting stories that captivated
-        audiences worldwide.
+        {heroSection.description}
       </p>
     </section>
   )
