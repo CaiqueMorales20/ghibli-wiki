@@ -1,10 +1,8 @@
+'use client'
+
 import { FilmCard } from '@/components/shared/film-card'
-import { getFilms } from '@/lib/api'
+import { Film } from '@/lib/api/types'
 
-export async function FilmsGrid() {
-  const { films, error } = await getFilms()
-
-  if (error) return <div>Error: {error.message}</div>
-
+export function FilmsGrid({ films }: { films: Film[] }) {
   return films?.map((film) => <FilmCard key={film.id} film={film} />)
 }

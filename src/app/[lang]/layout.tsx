@@ -7,6 +7,7 @@ import { Header } from '@/components/core/header/header'
 import { getDictionary, Locale } from '@/lib/i18n/dictionaries'
 import { LanguageProvider } from '@/lib/i18n/language-context'
 import { locales } from '@/middleware'
+import { QueryProvider } from '@/providers/query-provider'
 
 const nunito = Nunito({
   variable: '--font-nunito',
@@ -57,10 +58,12 @@ export default async function LocaleLayout({
         className={`${nunito.variable} ${ptSans.variable} relative antialiased`}
       >
         <div className="texture" />
-        <LanguageProvider dictionary={dictionary} locale={validLang}>
-          <Header />
-          {children}
-        </LanguageProvider>
+        <QueryProvider>
+          <LanguageProvider dictionary={dictionary} locale={validLang}>
+            <Header />
+            {children}
+          </LanguageProvider>
+        </QueryProvider>
       </body>
     </html>
   )

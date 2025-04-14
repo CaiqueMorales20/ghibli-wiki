@@ -23,6 +23,7 @@ export const FilmCard = ({ film }: FilmCardProps) => {
             src={film.movie_banner || film.image}
             alt={film.title}
             fill
+            sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, 33vw"
             className="object-cover transition-transform duration-500 group-hover:scale-105"
             priority
           />
