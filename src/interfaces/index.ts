@@ -1,0 +1,5 @@
+export * from './film'
+export * from './location'
+export * from './person'
+export * from './species'
+export * from './vehicle'

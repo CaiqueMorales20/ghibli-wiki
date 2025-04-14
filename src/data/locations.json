@@ -1,0 +1,46 @@
+[
+  {
+    "id": "11014596-71b0-4b3e-b8c0-1c4b15f28b9a",
+    "name": "Irontown",
+    "climate": "Continental",
+    "terrain": "Mountain",
+    "surface_water": "40",
+    "residents": [
+      "https://ghibliapi.vercel.app/people/ba924631-068e-4436-b6de-f3283fa848f0",
+      "https://ghibliapi.vercel.app/people/030555b3-4c92-4fce-93fb-e70c3ae3df8b"
+    ],
+    "films": [
+      "https://ghibliapi.vercel.app/films/0440483e-ca0e-4120-8c50-4c8cd9b965d6"
+    ],
+    "url": "https://ghibliapi.vercel.app/locations/11014596-71b0-4b3e-b8c0-1c4b15f28b9a"
+  },
+  {
+    "id": "62346d33-caa0-4c17-8016-0aca56f3066b",
+    "name": "Gutiokipanja",
+    "climate": "Continental",
+    "terrain": "Hill",
+    "surface_water": "50",
+    "residents": [
+      "https://ghibliapi.vercel.app/people/40c005ce-3725-4f15-8409-3e1b1b14b583",
+      "https://ghibliapi.vercel.app/people/fc196c4f-0201-4ed2-9add-c6403f7c4d32"
+    ],
+    "films": [
+      "https://ghibliapi.vercel.app/films/2baf70d1-42bb-4437-b551-e5fed5a87abe"
+    ],
+    "url": "https://ghibliapi.vercel.app/locations/62346d33-caa0-4c17-8016-0aca56f3066b"
+  },
+  {
+    "id": "a8bd9c03-7c80-4a97-b7c0-6a668acaf576",
+    "name": "The Cat Kingdom",
+    "climate": "Continental",
+    "terrain": "Plain",
+    "surface_water": "30",
+    "residents": [
+      "https://ghibliapi.vercel.app/people/6b3facea-ea33-47b1-96ce-3fc737b119b8"
+    ],
+    "films": [
+      "https://ghibliapi.vercel.app/films/90b72513-afd4-4570-84de-a56c312fdf81"
+    ],
+    "url": "https://ghibliapi.vercel.app/locations/a8bd9c03-7c80-4a97-b7c0-6a668acaf576"
+  }
+] 

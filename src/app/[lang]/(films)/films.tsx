@@ -1,13 +1,12 @@
 'use client'
 
-import { useFilms } from '@/lib/api/hooks/films'
 import { useLanguage } from '@/lib/i18n/language-context'
+import { getFilms } from '@/services/films'
 
 import { FilmsGrid } from './films-grid'
-import { FilmsGridFallback } from './films-grid-fallback'
 
 export function Films() {
-  const { data: films, isLoading } = useFilms()
+  const { films } = getFilms()
   const { dictionary } = useLanguage()
 
   return (
@@ -16,7 +15,7 @@ export function Films() {
         {dictionary.films.collection}
       </h2>
       <div className="grid grid-cols-1 gap-4 sm:gap-6 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-        {isLoading ? <FilmsGridFallback /> : <FilmsGrid films={films ?? []} />}
+        <FilmsGrid films={films} />
       </div>
     </section>
   )

@@ -16,6 +16,16 @@ export interface Translation {
   films: {
     collection: string
     director: string
+    description: string
+    production: string
+    details: string
+    director_label: string
+    producer_label: string
+    release_date: string
+    running_time: string
+    running_time_tooltip: string
+    rt_score: string
+    rt_score_tooltip: string
     titles: Record<string, string>
     descriptions: Record<string, string>
   }

@@ -7,7 +7,8 @@
     "home": "Início",
     "films": "Filmes",
     "characters": "Personagens",
-    "about": "Sobre"
+    "about": "Sobre",
+    "back_to_home": "Voltar à página inicial"
   },
   "hero": {
     "title": "Ghibli Wiki",
@@ -16,6 +17,16 @@
   "films": {
     "collection": "Coleção de Filmes",
     "director": "Diretor: ",
+    "description": "Descrição",
+    "production": "Produção",
+    "details": "Detalhes",
+    "director_label": "Diretor",
+    "producer_label": "Produtor",
+    "release_date": "Data de Lançamento",
+    "running_time": "Duração",
+    "running_time_tooltip": "Duração total do filme",
+    "rt_score": "Pontuação Rotten Tomatoes",
+    "rt_score_tooltip": "Pontuação dos críticos no Rotten Tomatoes",
     "titles": {
       "2baf70d1-42bb-4437-b551-e5fed5a87abe": "Castelo no Céu",
       "12cfb892-aac0-4c5b-94af-521852e46d6a": "Túmulo dos Vagalumes",

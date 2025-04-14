@@ -7,7 +7,8 @@
     "home": "Home",
     "films": "Films",
     "characters": "Characters",
-    "about": "About"
+    "about": "About",
+    "back_to_home": "Back to home"
   },
   "hero": {
     "title": "Ghibli Wiki",
@@ -16,6 +17,16 @@
   "films": {
     "collection": "Films Collection",
     "director": "Director: ",
+    "description": "Description",
+    "production": "Production",
+    "details": "Details",
+    "director_label": "Director",
+    "producer_label": "Producer",
+    "release_date": "Release Date",
+    "running_time": "Running Time",
+    "running_time_tooltip": "Total duration of the film",
+    "rt_score": "Rotten Tomatoes Score",
+    "rt_score_tooltip": "Critic score on Rotten Tomatoes",
     "titles": {
       "2baf70d1-42bb-4437-b551-e5fed5a87abe": "Castle in the Sky",
       "12cfb892-aac0-4c5b-94af-521852e46d6a": "Grave of the Fireflies",
