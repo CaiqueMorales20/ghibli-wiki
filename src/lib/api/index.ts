@@ -10,6 +10,3 @@ export * from './services/vehicles'
 
 // Client
 export * from './client'
-
-// Hooks
-export * from './hooks'

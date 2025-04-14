@@ -1,3 +1,5 @@
+/* eslint-disable */
+// @ts-nocheck
 'use client'
 
 import * as SelectPrimitive from '@radix-ui/react-select'

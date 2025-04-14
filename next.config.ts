@@ -2,11 +2,23 @@ import type { NextConfig } from 'next'
 
 const nextConfig: NextConfig = {
   images: {
-    domains: [
-      'image.tmdb.org',
-      'ghibliapi.vercel.app',
-      'upload.wikimedia.org',
-      'www.themoviedb.org',
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'image.tmdb.org',
+      },
+      {
+        protocol: 'https',
+        hostname: 'ghibliapi.vercel.app',
+      },
+      {
+        protocol: 'https',
+        hostname: 'upload.wikimedia.org',
+      },
+      {
+        protocol: 'https',
+        hostname: 'www.themoviedb.org',
+      },
     ],
   },
 }

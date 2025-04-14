@@ -1,17 +1,19 @@
 'use client'
 
 import { useFilms } from '@/lib/api/hooks/films'
+import { useLanguage } from '@/lib/i18n/language-context'
 
 import { FilmsGrid } from './films-grid'
 import { FilmsGridFallback } from './films-grid-fallback'
 
 export function Films() {
   const { data: films, isLoading } = useFilms()
+  const { dictionary } = useLanguage()
 
   return (
     <section className="py-4 sm:py-8">
       <h2 className="mb-4 text-2xl font-bold tracking-tight text-gray-900 sm:mb-8 sm:text-3xl">
-        Films Collection
+        {dictionary.films.collection}
       </h2>
       <div className="grid grid-cols-1 gap-4 sm:gap-6 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
         {isLoading ? <FilmsGridFallback /> : <FilmsGrid films={films ?? []} />}

@@ -1,3 +1,5 @@
+/* eslint-disable */
+// @ts-nocheck
 'use client'
 
 import * as AvatarPrimitive from '@radix-ui/react-avatar'

@@ -15,5 +15,8 @@ export interface Translation {
   }
   films: {
     collection: string
+    director: string
+    titles: Record<string, string>
+    descriptions: Record<string, string>
   }
 }

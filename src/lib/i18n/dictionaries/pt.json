@@ -14,6 +14,55 @@
     "description": "Descubra o mundo mágico dos filmes do Studio Ghibli, com seus personagens encantadores, paisagens deslumbrantes e histórias emocionantes que cativaram o público em todo o mundo."
   },
   "films": {
-    "collection": "Coleção de Filmes"
+    "collection": "Coleção de Filmes",
+    "director": "Diretor: ",
+    "titles": {
+      "2baf70d1-42bb-4437-b551-e5fed5a87abe": "Castelo no Céu",
+      "12cfb892-aac0-4c5b-94af-521852e46d6a": "Túmulo dos Vagalumes",
+      "58611129-2dbc-4a81-a72f-77ddfc1b1b49": "Meu Amigo Totoro",
+      "ea660b10-85c4-4ae3-8a5f-41cea3648e3e": "O Serviço de Entregas da Kiki",
+      "4e236f34-b981-41c3-8c65-f8c9000b94e7": "Memórias de Ontem",
+      "ebbb6b7c-945c-41ee-a792-de0e43191bd8": "Porco Rosso",
+      "1b67aa9a-2e4a-45af-ac98-64d6ad15b16c": "Pompoko",
+      "ff24da26-a969-4f0e-ba1e-a122ead6c6e3": "Sussurros do Coração",
+      "0440483e-ca0e-4120-8c50-4c8cd9b965d6": "Princesa Mononoke",
+      "45204234-adfd-45cb-a505-a8e7a676b114": "Meus Vizinhos, os Yamadas",
+      "dc2e6bd1-8156-4886-adff-b39e6043af0c": "A Viagem de Chihiro",
+      "90b72513-afd4-4570-84de-a56c312fdf81": "O Reino dos Gatos",
+      "cd3d059c-09f4-4ff3-8d63-bc765a5184fa": "O Castelo Animado",
+      "112c1e67-726f-40b1-ac17-6974127bb9b9": "Contos de Terramar",
+      "758bf02e-3122-46e0-884e-67cf83df1786": "Ponyo",
+      "2de9426b-914a-4a06-a3a0-5e6d9d3886f6": "O Mundo dos Pequeninos",
+      "45db04e4-304a-4933-9823-33f389e8d74d": "Da Colina Kokuriko",
+      "67405111-37a5-438f-81cc-4666af60c800": "Vidas ao Vento",
+      "578ae244-7750-4d9f-867b-f3cd3d6fecf4": "O Conto da Princesa Kaguya",
+      "5fdfb320-2a02-49a7-94ff-5ca418cae602": "As Memórias de Marnie",
+      "d868e6ec-c44a-405b-8fa6-f7f0f8cfb500": "A Tartaruga Vermelha",
+      "790e0028-a31c-4626-a694-86b7a8cada40": "Earwig e a Bruxa"
+    },
+    "descriptions": {
+      "2baf70d1-42bb-4437-b551-e5fed5a87abe": "A órfã Sheeta herdou um cristal misterioso que a liga ao mítico reino dos céus de Laputa. Com a ajuda do engenhoso Pazu e uma animada banda de piratas do céu, ela faz seu caminho até as ruínas da outrora grande civilização. Sheeta e Pazu devem superar o malvado Muska, que planeja usar a ciência de Laputa para se tornar o governante do mundo.",
+      "12cfb892-aac0-4c5b-94af-521852e46d6a": "Na última parte da Segunda Guerra Mundial, um menino e sua irmã, órfãos quando sua mãe é morta no bombardeio de Tóquio, são deixados para sobreviver por conta própria no que resta da vida civil no Japão. O enredo segue este menino e sua irmã enquanto fazem o melhor para sobreviver no interior japonês, enfrentando fome, preconceito e orgulho em sua própria batalha pessoal e silenciosa.",
+      "58611129-2dbc-4a81-a72f-77ddfc1b1b49": "Duas irmãs se mudam para o campo com seu pai para ficarem mais próximas de sua mãe hospitalizada, e descobrem que as árvores ao redor são habitadas por Totoros, espíritos mágicos da floresta. Quando a mais nova foge de casa, a irmã mais velha busca ajuda dos espíritos para encontrá-la.",
+      "ea660b10-85c4-4ae3-8a5f-41cea3648e3e": "Uma jovem bruxa, em seu ano obrigatório de vida independente, encontra dificuldade em se encaixar em uma nova comunidade enquanto se sustenta administrando um serviço de entrega aérea.",
+      "4e236f34-b981-41c3-8c65-f8c9000b94e7": "É 1982, e Taeko tem 27 anos, solteira e viveu toda a sua vida em Tóquio. Ela decide visitar sua família no interior, e enquanto o trem viaja durante a noite, memórias inundam de seus anos mais jovens: os primeiros sentimentos imaturos de romance, o início da puberdade e as frustrações com matemática e meninos. Na estação, ela é recebida pelo jovem fazendeiro Toshio, e os encontros com ele começam a reconectá-la a desejos esquecidos.",
+      "ebbb6b7c-945c-41ee-a792-de0e43191bd8": "Porco Rosso, conhecido no Japão como Porco Carmesim, é o sexto filme animado de Hayao Miyazaki e lançado em 1992. Você é apresentado a um ás da aviação italiano da Primeira Guerra Mundial, agora vivendo como caçador de recompensas autônomo perseguindo 'piratas do ar' no Mar Adriático. Ele recebeu uma maldição que transformou sua cabeça em uma de porco. Antes chamado Marco Pagot, ele agora é conhecido no mundo como 'Porco Rosso'.",
+      "1b67aa9a-2e4a-45af-ac98-64d6ad15b16c": "À medida que o desenvolvimento da cidade humana invade o habitat da floresta e do prado da população de guaxinins, os guaxinins se encontram diante da possibilidade muito real de extinção. Em resposta, os guaxinins se envolvem em uma luta desesperada para parar a construção e preservar seu lar.",
+      "ff24da26-a969-4f0e-ba1e-a122ead6c6e3": "Shizuku vive uma vida simples, dominada por seu amor por histórias e escrita. Um dia ela percebe que todos os livros da biblioteca que ela tem foram anteriormente emprestados pela mesma pessoa: 'Seiji Amasawa'. Curiosa para saber quem ele é, Shizuku conhece um garoto da sua idade que ela acha irritante, mas descobre para seu choque que ele é seu 'Príncipe dos Livros'.",
+      "0440483e-ca0e-4120-8c50-4c8cd9b965d6": "Ashitaka, um príncipe da tribo Ainu em extinção, é amaldiçoado por um deus javali demonizado e deve viajar para o oeste para encontrar uma cura. No caminho, ele encontra San, uma jovem mulher humana lutando para proteger a floresta, e Lady Eboshi, que está tentando destruí-la. Ashitaka deve encontrar uma maneira de trazer equilíbrio a este conflito.",
+      "45204234-adfd-45cb-a505-a8e7a676b114": "Os Yamadas são uma típica família japonesa de classe média em Tóquio urbano e este filme nos mostra uma variedade de episódios de suas vidas. Com histórias que variam do humorístico ao comovente, vemos esta família lidar com os pequenos conflitos, problemas e alegrias da vida à sua própria maneira.",
+      "dc2e6bd1-8156-4886-adff-b39e6043af0c": "A Viagem de Chihiro é um filme de animação japonês vencedor do Oscar sobre uma garota de dez anos que se afasta de seus pais por um caminho que leva a um mundo governado por animais estranhos e incomuns parecidos com monstros. Seus pais foram transformados em porcos junto com outros dentro de uma casa de banho cheia dessas criaturas. Ela verá o mundo como era antes?",
+      "90b72513-afd4-4570-84de-a56c312fdf81": "Haru, uma estudante entediada por sua rotina comum, salva a vida de um gato incomum e de repente seu mundo é transformado além de qualquer coisa que ela jamais imaginou. O Rei dos Gatos recompensa seu bom feito com uma chuva de presentes, incluindo uma proposta muito chocante de casamento com seu filho! Haru embarca em uma jornada inesperada para o Reino dos Gatos onde seus olhos são abertos para um mundo completamente diferente.",
+      "cd3d059c-09f4-4ff3-8d63-bc765a5184fa": "Quando Sophie, uma jovem tímida, é amaldiçoada com um corpo velho por uma bruxa maldosa, sua única chance de quebrar o feitiço está com um jovem mago auto-indulgente, mas inseguro, e seus companheiros em sua casa ambulante com pernas.",
+      "112c1e67-726f-40b1-ac17-6974127bb9b9": "Algo bizarro tomou conta da terra. O reino está se deteriorando. As pessoas estão começando a agir de forma estranha... O que é ainda mais estranho é que as pessoas estão começando a ver dragões, que não deveriam entrar no mundo dos humanos. Devido a todos esses eventos bizarros, Ged, um mago errante, está investigando a causa. Durante sua jornada, ele conhece o Príncipe Arren, um jovem adolescente perturbado.",
+      "758bf02e-3122-46e0-884e-67cf83df1786": "Filho de um marinheiro, Sosuke de 5 anos vive uma vida tranquila em um penhasco à beira-mar com sua mãe Lisa. Um dia fatídico, ele encontra um lindo peixe dourado preso em uma garrafa na praia e, ao resgatá-la, a nomeia Ponyo. Mas ela não é um peixe dourado comum. Filha de um mestre feiticeiro e uma deusa do mar, Ponyo usa a magia de seu pai para se transformar em uma jovem garota e rapidamente se apaixona por Sosuke.",
+      "2de9426b-914a-4a06-a3a0-5e6d9d3886f6": "Arrietty de 14 anos e o resto da família Clock vivem em anonimato pacífico enquanto fazem sua própria casa a partir de itens 'emprestados' dos habitantes humanos da casa. No entanto, a vida muda para os Clocks quando um garoto humano descobre Arrietty.",
+      "45db04e4-304a-4933-9823-33f389e8d74d": "A história se passa em 1963 em Yokohama. A Mansão Kokuriko fica em uma colina com vista para o porto. Uma garota de 16 anos, Umi, vive naquela casa. Todas as manhãs ela levanta uma bandeira de sinalização voltada para o mar. A bandeira significa 'Rezo por viagens seguras'. Um garoto de 17 anos, Shun, sempre vê esta bandeira do mar enquanto viaja em um rebocador para a escola.",
+      "67405111-37a5-438f-81cc-4666af60c800": "Um amor vitalício pelo voo inspira o engenheiro de aviação japonês Jiro Horikoshi, cuja carreira notável inclui a criação do avião de combate A-6M da Segunda Guerra Mundial.",
+      "578ae244-7750-4d9f-867b-f3cd3d6fecf4": "Um cortador de bambu chamado Sanuki no Miyatsuko descobre uma garota em miniatura dentro de um broto de bambu brilhante. Acreditando que ela seja uma presença divina, ele e sua esposa decidem criá-la como sua própria filha, chamando-a de 'Princesa'.",
+      "5fdfb320-2a02-49a7-94ff-5ca418cae602": "O filme segue Anna Sasaki vivendo com seus parentes na cidade litorânea. Anna encontra uma mansão abandonada nas proximidades, onde conhece Marnie, uma garota misteriosa que pede que ela prometa manter seus segredos de todos. À medida que o verão avança, Anna passa mais tempo com Marnie, e eventualmente Anna aprende a verdade sobre sua família e cuidados adotivos.",
+      "d868e6ec-c44a-405b-8fa6-f7f0f8cfb500": "Um homem à deriva por uma tempestade acorda em uma praia. Ele descobre que está em uma ilha deserta com bastante água doce, frutas e uma densa floresta de bambu. Ele constrói uma jangada de bambu e tenta navegar para longe, mas sua jangada é destruída por um monstro invisível no mar, forçando-o a voltar para a ilha.",
+      "790e0028-a31c-4626-a694-86b7a8cada40": "Uma garota órfã, Earwig, é adotada por uma bruxa e chega em casa para uma casa assustadora cheia de mistério e magia."
+    }
   }
 }
