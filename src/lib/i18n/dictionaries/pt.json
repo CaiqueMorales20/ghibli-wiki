@@ -75,5 +75,10 @@
       "d868e6ec-c44a-405b-8fa6-f7f0f8cfb500": "Um homem à deriva por uma tempestade acorda em uma praia. Ele descobre que está em uma ilha deserta com bastante água doce, frutas e uma densa floresta de bambu. Ele constrói uma jangada de bambu e tenta navegar para longe, mas sua jangada é destruída por um monstro invisível no mar, forçando-o a voltar para a ilha.",
       "790e0028-a31c-4626-a694-86b7a8cada40": "Uma garota órfã, Earwig, é adotada por uma bruxa e chega em casa para uma casa assustadora cheia de mistério e magia."
     }
+  },
+  "not_found": {
+    "title": "Página Não Encontrada",
+    "description": "Parece que você se perdeu no reino dos espíritos! Esta página não existe em nosso mundo.",
+    "return_home": "Voltar ao Início"
   }
 }

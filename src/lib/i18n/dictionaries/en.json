@@ -75,5 +75,10 @@
       "d868e6ec-c44a-405b-8fa6-f7f0f8cfb500": "A man set adrift by a storm wakes up on a beach. He discovers that he is on a deserted island with plenty of fresh water, fruit and a dense bamboo forest. He builds a raft from bamboo and attempts to sail away, but his raft is destroyed by an unseen monster in the sea, forcing him back to the island.",
       "790e0028-a31c-4626-a694-86b7a8cada40": "An orphan girl, Earwig, is adopted by a witch and comes home to a spooky house filled with mystery and magic."
     }
+  },
+  "not_found": {
+    "title": "Page Not Found",
+    "description": "Looks like you've wandered into the spirit realm! This page doesn't exist in our world.",
+    "return_home": "Return to Home"
   }
 }

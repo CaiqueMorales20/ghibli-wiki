@@ -8,14 +8,10 @@ import {
   CardFooter,
   CardTitle,
 } from '@/components/ui/card'
-import { Film } from '@/lib/api'
+import { Film } from '@/interfaces'
 import { useLanguage } from '@/lib/i18n/language-context'
 
-export interface FilmCardProps {
-  film: Film
-}
-
-export const FilmCard = ({ film }: FilmCardProps) => {
+export const FilmCard = ({ film }: { film: Film }) => {
   const { dictionary } = useLanguage()
 
   return (
