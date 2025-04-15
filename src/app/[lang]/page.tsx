@@ -1,5 +1,5 @@
-import { Films } from '@/app/[lang]/(films)/films'
-import { Hero } from '@/app/[lang]/(hero)/hero'
+import { Films } from '@/app/[lang]/(homepage)/(films)/films'
+import { Hero } from '@/app/[lang]/(homepage)/(hero)/hero'
 
 export default function Home() {
   return (

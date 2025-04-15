@@ -26,7 +26,7 @@ export default async function FilmPage({
   return (
     <div className="c-container relative min-h-screen overflow-hidden py-8 md:py-16">
       <Button className="mb-6" variant="outline" asChild>
-        <Link href="/">
+        <Link href={`/${lang}`}>
           <ArrowLeft className="h-4 w-4" />
           {dictionary.nav.back_to_home}
         </Link>

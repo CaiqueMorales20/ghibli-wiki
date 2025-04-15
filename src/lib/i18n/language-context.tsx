@@ -6,10 +6,12 @@ import {
   ReactNode,
   useCallback,
   useContext,
+  useEffect,
+  useRef,
   useState,
 } from 'react'
 
-import { defaultLocale, locales } from '@/middleware'
+import { locales } from '@/middleware'
 
 import { type Locale } from './dictionaries'
 import { type Translation } from './translations'
@@ -20,6 +22,26 @@ type LanguageContextType = {
   setLocale: (locale: Locale) => void
   dictionary: Translation
   currentFlag: string
+  ready: boolean
+}
+
+const LOCALE_STORAGE_KEY = 'preferredLocale'
+
+// Create a separate component that only renders when hydration is complete
+function HydrationBlocker({ children }: { children: ReactNode }) {
+  const [hydrated, setHydrated] = useState(false)
+
+  useEffect(() => {
+    setHydrated(true)
+  }, [])
+
+  // During server-side rendering and initial client render, return nothing
+  if (!hydrated) {
+    return null
+  }
+
+  // After hydration, render children
+  return <>{children}</>
 }
 
 const LanguageContext = createContext<LanguageContextType | undefined>(
@@ -37,53 +59,132 @@ export const LanguageProvider = ({
 }) => {
   const pathname = usePathname()
   const router = useRouter()
+  const initialized = useRef(false)
+  const [ready, setReady] = useState(false)
 
   // Get language from URL path
   const pathnameLocale = pathname.split('/')[1] as Locale
-  const isValidLocale = locales.includes(pathnameLocale as Locale)
+  const isValidPathLocale = locales.includes(pathnameLocale as Locale)
 
-  const [locale, setLocale] = useState<Locale>(
-    isValidLocale
+  // Use a ref to track the source of truth for locale
+  const localeRef = useRef<Locale>(
+    isValidPathLocale
       ? (pathnameLocale as Locale)
-      : initialLocale
-        ? (initialLocale as Locale)
-        : defaultLocale,
+      : (initialLocale as Locale) || 'pt',
   )
 
-  const [currentFlag, setCurrentFlag] = useState(
-    locale === 'en' ? '/flags/us.svg' : '/flags/br.svg',
+  // State follows the ref
+  const [locale, setLocaleState] = useState<Locale>(localeRef.current)
+
+  // Flag follows the locale ref
+  const [currentFlag, setCurrentFlag] = useState(() =>
+    localeRef.current === 'en' ? '/flags/us.svg' : '/flags/br.svg',
   )
 
-  const updateLocale = useCallback(
-    (newLocale: Locale) => {
-      setLocale(newLocale)
+  // One comprehensive initialization effect
+  useEffect(() => {
+    if (typeof window === 'undefined' || initialized.current) return
 
-      // Update flag accordingly
-      if (newLocale === 'en') {
-        setCurrentFlag('/flags/us.svg')
-      } else if (newLocale === 'pt') {
-        setCurrentFlag('/flags/br.svg')
+    // Function to update everything consistently
+    const updateLocaleData = (newLocale: Locale) => {
+      localeRef.current = newLocale
+      setLocaleState(newLocale)
+      setCurrentFlag(newLocale === 'en' ? '/flags/us.svg' : '/flags/br.svg')
+    }
+
+    try {
+      // Check localStorage for saved preference
+      const savedLocale = localStorage.getItem(
+        LOCALE_STORAGE_KEY,
+      ) as Locale | null
+      const validSavedLocale =
+        savedLocale && locales.includes(savedLocale as Locale)
+          ? (savedLocale as Locale)
+          : null
+
+      if (validSavedLocale) {
+        // Update with saved locale
+        updateLocaleData(validSavedLocale)
+
+        // Update URL if needed and safe to do so
+        if (pathname && router) {
+          if (isValidPathLocale && pathnameLocale !== validSavedLocale) {
+            router.replace(
+              pathname.replace(`/${pathnameLocale}`, `/${validSavedLocale}`),
+            )
+          } else if (!isValidPathLocale) {
+            router.replace(
+              `/${validSavedLocale}${pathname === '/' ? '' : pathname}`,
+            )
+          }
+        }
+      } else {
+        // If no valid saved locale, use Portuguese as default
+        const defaultLocale: Locale = 'pt'
+        updateLocaleData(defaultLocale)
+        localStorage.setItem(LOCALE_STORAGE_KEY, defaultLocale)
+
+        // Update URL if needed
+        if (pathname && router && !isValidPathLocale) {
+          router.replace(`/${defaultLocale}${pathname === '/' ? '' : pathname}`)
+        }
       }
+    } catch (error) {
+      // Handle errors (e.g., localStorage blocked)
+      console.error('Error accessing localStorage:', error)
+    }
 
-      // Redirect to the same page with new locale
-      if (isValidLocale && pathnameLocale !== newLocale) {
-        const newPath = pathname.replace(`/${pathnameLocale}`, `/${newLocale}`)
-        router.push(newPath)
+    // Mark as initialized and ready
+    initialized.current = true
+    setReady(true)
+  }, [pathname, router, pathnameLocale, isValidPathLocale])
+
+  // Save to localStorage when locale changes (but not during initialization)
+  useEffect(() => {
+    if (typeof window !== 'undefined' && initialized.current) {
+      try {
+        localStorage.setItem(LOCALE_STORAGE_KEY, locale)
+      } catch (error) {
+        console.error('Error saving to localStorage:', error)
+      }
+    }
+  }, [locale])
+
+  // Wrapper for setLocale
+  const setLocale = useCallback(
+    (newLocale: Locale) => {
+      // Update state and ref
+      localeRef.current = newLocale
+      setLocaleState(newLocale)
+      setCurrentFlag(newLocale === 'en' ? '/flags/us.svg' : '/flags/br.svg')
+
+      // Update URL
+      if (pathname && router) {
+        if (isValidPathLocale) {
+          const newPath = pathname.replace(
+            `/${pathnameLocale}`,
+            `/${newLocale}`,
+          )
+          router.push(newPath)
+        } else {
+          router.push(`/${newLocale}${pathname === '/' ? '' : pathname}`)
+        }
       }
     },
-    [pathname, pathnameLocale, isValidLocale, router],
+    [pathname, router, pathnameLocale, isValidPathLocale],
   )
 
   const value = {
     locale,
-    setLocale: updateLocale,
+    setLocale,
     dictionary: dictionary || ({} as Translation),
     currentFlag,
+    ready,
   }
 
   return (
     <LanguageContext.Provider value={value}>
-      {children}
+      <HydrationBlocker>{children}</HydrationBlocker>
     </LanguageContext.Provider>
   )
 }

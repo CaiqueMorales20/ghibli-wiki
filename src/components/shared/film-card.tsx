@@ -12,10 +12,10 @@ import { Film } from '@/interfaces'
 import { useLanguage } from '@/lib/i18n/language-context'
 
 export const FilmCard = ({ film }: { film: Film }) => {
-  const { dictionary } = useLanguage()
+  const { dictionary, locale } = useLanguage()
 
   return (
-    <Link href={`/films/${film.id}`} className="group">
+    <Link href={`/${locale}/films/${film.id}`} className="group">
       <Card className="overflow-hidden rounded-lg border py-0 transition-all duration-300 hover:shadow-xl">
         <div className="relative h-[200px] w-full overflow-hidden sm:h-[250px] md:h-[300px]">
           <Image
