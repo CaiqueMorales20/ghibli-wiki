@@ -15,7 +15,7 @@ export const FilmCard = ({ film }: { film: Film }) => {
   const { dictionary, locale } = useLanguage()
 
   return (
-    <Link href={`/${locale}/films/${film.id}`} className="group">
+    <Link href={`/${locale}/filmes/${film.id}`} className="group">
       <Card className="overflow-hidden rounded-lg border py-0 transition-all duration-300 hover:shadow-xl">
         <div className="relative h-[200px] w-full overflow-hidden sm:h-[250px] md:h-[300px]">
           <Image

@@ -79,13 +79,13 @@ export const Header = () => {
               {navSection.films}
             </Link>
             <Link
-              href={getLocalizedPath('/characters')}
+              href={getLocalizedPath('/personagens')}
               className="font-medium text-gray-800 transition-colors"
             >
               {navSection.characters}
             </Link>
             <Link
-              href={getLocalizedPath('/about')}
+              href={getLocalizedPath('/sobre')}
               className="font-medium text-gray-800 transition-colors"
             >
               {navSection.about}
@@ -121,19 +121,19 @@ export const Header = () => {
                   {navSection.films}
                 </Link>
                 <Link
-                  href={getLocalizedPath('/filmes')}
-                  className="py-2 text-base font-medium text-gray-800 transition-colors"
-                >
-                  {navSection.films}
-                </Link>
-                <Link
-                  href={getLocalizedPath('/characters')}
+                  href={getLocalizedPath('/personagens')}
                   className="py-2 text-base font-medium text-gray-800 transition-colors"
                 >
                   {navSection.characters}
                 </Link>
                 <Link
-                  href={getLocalizedPath('/about')}
+                  href={getLocalizedPath('/personagens')}
+                  className="py-2 text-base font-medium text-gray-800 transition-colors"
+                >
+                  {navSection.characters}
+                </Link>
+                <Link
+                  href={getLocalizedPath('/sobre')}
                   className="py-2 text-base font-medium text-gray-800 transition-colors"
                 >
                   {navSection.about}

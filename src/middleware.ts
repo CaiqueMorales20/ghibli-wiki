@@ -1,3 +1,4 @@
+import type { NextRequest } from 'next/server'
 import { NextResponse } from 'next/server'
 
 import { Locale } from './lib/i18n/dictionaries'
@@ -5,8 +6,14 @@ import { Locale } from './lib/i18n/dictionaries'
 // List of supported locales
 export const locales: Locale[] = ['en', 'pt']
 
-export function middleware() {
-  // Just pass the request along without any redirects
+export function middleware(request: NextRequest) {
+  const { pathname } = request.nextUrl
+
+  // Redirect root path to /pt
+  if (pathname === '/') {
+    return NextResponse.redirect(new URL('/pt', request.url))
+  }
+
   return NextResponse.next()
 }
 
