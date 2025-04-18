@@ -8,4 +8,5 @@ export interface Person {
   films: string[]
   species: string
   url: string
+  photo: string
 }

@@ -76,9 +76,75 @@
       "790e0028-a31c-4626-a694-86b7a8cada40": "An orphan girl, Earwig, is adopted by a witch and comes home to a spooky house filled with mystery and magic."
     }
   },
+  "people": {
+    "collection": "Characters Collection",
+    "gender": "Gender",
+    "age": "Age",
+    "eye_color": "Eye Color",
+    "hair_color": "Hair Color",
+    "species": "Species",
+    "unknown": "Unknown",
+    "unspecified": "Unspecified",
+    "elderly": "Elderly",
+    "adult": "Adult",
+    "middle_age": "Middle Age",
+    "late_teens": "Late Teens",
+    "really_old": "Really Old",
+    "na": "N/A",
+    "genders": {
+      "Male": "Male",
+      "Female": "Female",
+      "NA": "N/A"
+    },
+    "colors": {
+      "Green": "Green",
+      "Black": "Black",
+      "Brown": "Brown",
+      "Peach": "Peach",
+      "Blue": "Blue",
+      "Grey": "Grey",
+      "White": "White",
+      "Red": "Red",
+      "Orange": "Orange",
+      "Yellow": "Yellow",
+      "Blonde": "Blonde",
+      "Light Brown": "Light Brown",
+      "Dark Brown": "Dark Brown",
+      "Reddish Brown": "Reddish Brown",
+      "Light Gray": "Light Gray",
+      "Light Orange": "Light Orange",
+      "Hazel": "Hazel",
+      "Cyan": "Cyan",
+      "Emerald": "Emerald"
+    },
+    "speciesTypes": {
+      "Human": "Human",
+      "Dragon": "Dragon",
+      "Spirit": "Spirit",
+      "God": "God",
+      "Cat": "Cat",
+      "Totoro": "Totoro",
+      "Wolf": "Wolf",
+      "Deer": "Deer"
+    }
+  },
   "not_found": {
     "title": "Page Not Found",
     "description": "Looks like you've wandered into the spirit realm! This page doesn't exist in our world.",
     "return_home": "Return to Home"
+  },
+  "about": {
+    "title": "About Studio Ghibli",
+    "studioGhibli": "Studio Ghibli",
+    "studioGhibliDescription": "Studio Ghibli is a Japanese animation film studio based in Koganei, Tokyo. Founded in 1985 by directors Hayao Miyazaki and Isao Takahata, along with producer Toshio Suzuki, the studio has produced some of the most beloved animated films in history, including \"Spirited Away\", \"My Neighbor Totoro\", and \"Princess Mononoke\".",
+    "thisWiki": "This Wiki",
+    "thisWikiDescription": "About this wiki",
+    "contribution": "Contribution",
+    "contributionDescription": "If you would like to contribute or suggest improvements, please feel free to reach out.",
+    "creator": {
+      "text": "This wiki was created by",
+      "name": "Caique Morales",
+      "description": ", a passionate developer and Studio Ghibli enthusiast. It's a personal project built to share knowledge and appreciation for Studio Ghibli's incredible works."
+    }
   }
 }

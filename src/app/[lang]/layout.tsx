@@ -3,6 +3,7 @@ import '@/app/globals.css'
 // eslint-disable-next-line
 import { Nunito, PT_Sans } from 'next/font/google'
 
+import { Footer } from '@/components/core/footer/footer'
 import { Header } from '@/components/core/header/header'
 import { getDictionary, Locale } from '@/lib/i18n/dictionaries'
 import { LanguageProvider } from '@/lib/i18n/language-context'
@@ -60,6 +61,7 @@ export default async function LocaleLayout({
         <LanguageProvider dictionary={dictionary} locale={validLang}>
           <Header />
           {children}
+          <Footer />
         </LanguageProvider>
       </body>
     </html>

@@ -4,6 +4,7 @@ import { motion } from 'framer-motion'
 import { Menu } from 'lucide-react'
 import Image from 'next/image'
 import Link from 'next/link'
+import { usePathname } from 'next/navigation'
 
 import {
   Sheet,
@@ -19,10 +20,16 @@ import { LanguageSwitcher } from '../language-switcher/language-switcher'
 export const Header = () => {
   const { locale, dictionary } = useLanguage()
   const navSection = dictionary.nav
+  const pathname = usePathname()
 
   // Get the base path without the locale prefix
   const getLocalizedPath = (path: string) => {
     return `/${locale}${path === '/' ? '' : path}`
+  }
+
+  const isActive = (path: string) => {
+    const localizedPath = getLocalizedPath(path)
+    return pathname === localizedPath
   }
 
   const headerVariants = {
@@ -68,25 +75,33 @@ export const Header = () => {
           <nav className="flex items-center gap-8 text-base">
             <Link
               href={getLocalizedPath('/')}
-              className="font-medium text-gray-800 transition-colors"
+              className={`font-medium text-gray-800 transition-colors ${
+                isActive('/') ? 'text-primary font-semibold' : ''
+              }`}
             >
               {navSection.home}
             </Link>
             <Link
               href={getLocalizedPath('/filmes')}
-              className="font-medium text-gray-800 transition-colors"
+              className={`font-medium text-gray-800 transition-colors ${
+                isActive('/filmes') ? 'text-primary font-semibold' : ''
+              }`}
             >
               {navSection.films}
             </Link>
             <Link
               href={getLocalizedPath('/personagens')}
-              className="font-medium text-gray-800 transition-colors"
+              className={`font-medium text-gray-800 transition-colors ${
+                isActive('/personagens') ? 'text-primary font-semibold' : ''
+              }`}
             >
               {navSection.characters}
             </Link>
             <Link
               href={getLocalizedPath('/sobre')}
-              className="font-medium text-gray-800 transition-colors"
+              className={`font-medium text-gray-800 transition-colors ${
+                isActive('/sobre') ? 'text-primary font-semibold' : ''
+              }`}
             >
               {navSection.about}
             </Link>
@@ -110,31 +125,33 @@ export const Header = () => {
               <nav className="flex flex-col p-4">
                 <Link
                   href={getLocalizedPath('/')}
-                  className="py-2 text-base font-medium text-gray-800 transition-colors"
+                  className={`py-2 text-base font-medium text-gray-800 transition-colors ${
+                    isActive('/') ? 'text-primary font-semibold' : ''
+                  }`}
                 >
                   {navSection.home}
                 </Link>
                 <Link
                   href={getLocalizedPath('/filmes')}
-                  className="py-2 text-base font-medium text-gray-800 transition-colors"
+                  className={`py-2 text-base font-medium text-gray-800 transition-colors ${
+                    isActive('/filmes') ? 'text-primary font-semibold' : ''
+                  }`}
                 >
                   {navSection.films}
                 </Link>
                 <Link
                   href={getLocalizedPath('/personagens')}
-                  className="py-2 text-base font-medium text-gray-800 transition-colors"
-                >
-                  {navSection.characters}
-                </Link>
-                <Link
-                  href={getLocalizedPath('/personagens')}
-                  className="py-2 text-base font-medium text-gray-800 transition-colors"
+                  className={`py-2 text-base font-medium text-gray-800 transition-colors ${
+                    isActive('/personagens') ? 'text-primary font-semibold' : ''
+                  }`}
                 >
                   {navSection.characters}
                 </Link>
                 <Link
                   href={getLocalizedPath('/sobre')}
-                  className="py-2 text-base font-medium text-gray-800 transition-colors"
+                  className={`py-2 text-base font-medium text-gray-800 transition-colors ${
+                    isActive('/sobre') ? 'text-primary font-semibold' : ''
+                  }`}
                 >
                   {navSection.about}
                 </Link>

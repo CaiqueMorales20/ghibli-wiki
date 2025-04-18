@@ -14,6 +14,20 @@
     "title": "Ghibli Wiki",
     "description": "Descubra o mundo mágico dos filmes do Studio Ghibli, com seus personagens encantadores, paisagens deslumbrantes e histórias emocionantes que cativaram o público em todo o mundo."
   },
+  "about": {
+    "title": "Sobre o Studio Ghibli",
+    "studioGhibli": "Studio Ghibli",
+    "studioGhibliDescription": "O Studio Ghibli é um estúdio de animação japonês sediado em Koganei, Tóquio. Fundado em 1985 pelos diretores Hayao Miyazaki e Isao Takahata, junto com o produtor Toshio Suzuki, o estúdio produziu alguns dos filmes de animação mais amados da história, incluindo 'A Viagem de Chihiro', 'Meu Amigo Totoro' e 'Princesa Mononoke'.",
+    "thisWiki": "Esta Wiki",
+    "thisWikiDescription": "Sobre esta wiki",
+    "contribution": "Contribuição",
+    "contributionDescription": "Se você gostaria de contribuir ou sugerir melhorias, sinta-se à vontade para entrar em contato.",
+    "creator": {
+      "text": "Esta wiki foi criada por",
+      "name": "Caique Morales",
+      "description": ", um desenvolvedor apaixonado e entusiasta do Studio Ghibli. É um projeto pessoal construído para compartilhar conhecimento e apreciação pelas obras incríveis do Studio Ghibli."
+    }
+  },
   "films": {
     "collection": "Coleção de Filmes",
     "director": "Diretor: ",
@@ -74,6 +88,58 @@
       "5fdfb320-2a02-49a7-94ff-5ca418cae602": "O filme segue Anna Sasaki vivendo com seus parentes na cidade litorânea. Anna encontra uma mansão abandonada nas proximidades, onde conhece Marnie, uma garota misteriosa que pede que ela prometa manter seus segredos de todos. À medida que o verão avança, Anna passa mais tempo com Marnie, e eventualmente Anna aprende a verdade sobre sua família e cuidados adotivos.",
       "d868e6ec-c44a-405b-8fa6-f7f0f8cfb500": "Um homem à deriva por uma tempestade acorda em uma praia. Ele descobre que está em uma ilha deserta com bastante água doce, frutas e uma densa floresta de bambu. Ele constrói uma jangada de bambu e tenta navegar para longe, mas sua jangada é destruída por um monstro invisível no mar, forçando-o a voltar para a ilha.",
       "790e0028-a31c-4626-a694-86b7a8cada40": "Uma garota órfã, Earwig, é adotada por uma bruxa e chega em casa para uma casa assustadora cheia de mistério e magia."
+    }
+  },
+  "people": {
+    "collection": "Coleção de Personagens",
+    "gender": "Gênero",
+    "age": "Idade",
+    "eye_color": "Cor dos Olhos",
+    "hair_color": "Cor do Cabelo",
+    "species": "Espécie",
+    "unknown": "Desconhecido",
+    "unspecified": "Não especificado",
+    "elderly": "Idoso",
+    "adult": "Adulto",
+    "middle_age": "Meia-idade",
+    "late_teens": "Final da adolescência",
+    "really_old": "Muito velho",
+    "na": "N/A",
+    "genders": {
+      "Male": "Masculino",
+      "Female": "Feminino",
+      "NA": "N/A"
+    },
+    "colors": {
+      "Green": "Verde",
+      "Black": "Preto",
+      "Brown": "Marrom",
+      "Peach": "Pêssego",
+      "Blue": "Azul",
+      "Grey": "Cinza",
+      "White": "Branco",
+      "Red": "Vermelho",
+      "Orange": "Laranja",
+      "Yellow": "Amarelo",
+      "Blonde": "Loiro",
+      "Light Brown": "Marrom Claro",
+      "Dark Brown": "Marrom Escuro",
+      "Reddish Brown": "Marrom Avermelhado",
+      "Light Gray": "Cinza Claro",
+      "Light Orange": "Laranja Claro",
+      "Hazel": "Avelã",
+      "Cyan": "Ciano",
+      "Emerald": "Esmeralda"
+    },
+    "speciesTypes": {
+      "Human": "Humano",
+      "Dragon": "Dragão",
+      "Spirit": "Espírito",
+      "God": "Deus",
+      "Cat": "Gato",
+      "Totoro": "Totoro",
+      "Wolf": "Lobo",
+      "Deer": "Cervo"
     }
   },
   "not_found": {
