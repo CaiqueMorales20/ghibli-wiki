@@ -5,6 +5,13 @@ import enDictionary from '../lib/i18n/dictionaries/en.json'
 import ptDictionary from '../lib/i18n/dictionaries/pt.json'
 import { Translation } from '../lib/i18n/translations'
 
+export const normalizeText = (text: string): string => {
+  return text
+    .toLowerCase()
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+}
+
 export const getFilms = ({
   search,
   locale = 'en',
@@ -14,10 +21,12 @@ export const getFilms = ({
 }): { films: Film[] } => {
   if (!search) return { films: filmsData }
 
-  const searchLower = search.toLowerCase()
+  const normalizedSearch = normalizeText(search)
 
   const filteredFilms = filmsData.filter((film) => {
-    const originalTitleMatch = film.title.toLowerCase().includes(searchLower)
+    const originalTitleMatch = normalizeText(film.title).includes(
+      normalizedSearch,
+    )
 
     const currentDict =
       locale === 'en'
@@ -29,14 +38,12 @@ export const getFilms = ({
         : (enDictionary as Translation)
 
     const currentLocaleTitle = currentDict.films.titles[film.id] || ''
-    const currentLocaleTitleMatch = currentLocaleTitle
-      .toLowerCase()
-      .includes(searchLower)
+    const currentLocaleTitleMatch =
+      normalizeText(currentLocaleTitle).includes(normalizedSearch)
 
     const otherLocaleTitle = otherDict.films.titles[film.id] || ''
-    const otherLocaleTitleMatch = otherLocaleTitle
-      .toLowerCase()
-      .includes(searchLower)
+    const otherLocaleTitleMatch =
+      normalizeText(otherLocaleTitle).includes(normalizedSearch)
 
     return (
       originalTitleMatch || currentLocaleTitleMatch || otherLocaleTitleMatch
