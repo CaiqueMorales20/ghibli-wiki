@@ -104,8 +104,9 @@
     "adult": "Adulto",
     "middle_age": "Meia-idade",
     "late_teens": "Final da adolescência",
-    "really_old": "Muito velho",
+    "really_old": "Muito Idoso",
     "na": "N/A",
+    "search_placeholder": "Buscar personagens...",
     "genders": {
       "Male": "Masculino",
       "Female": "Feminino",

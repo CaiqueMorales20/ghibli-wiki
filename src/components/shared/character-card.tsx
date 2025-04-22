@@ -1,11 +1,21 @@
 'use client'
 
+import { motion } from 'framer-motion'
+
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Person } from '@/interfaces'
 import { useLanguage } from '@/lib/i18n/language-context'
 import { getSpeciesById } from '@/services/species'
 
-export function CharacterCard({ person }: { person: Person }) {
+export function CharacterCard({
+  person,
+  index = 0,
+  defaultDelay = 0,
+}: {
+  person: Person
+  index?: number
+  defaultDelay?: number
+}) {
   const { species } = getSpeciesById(person.species)
   const { dictionary: dict } = useLanguage()
 
@@ -73,37 +83,57 @@ export function CharacterCard({ person }: { person: Person }) {
     )
   }
 
+  const transitionConfig = {
+    enter: {
+      duration: 0.2,
+      delay: defaultDelay + index * 0.05,
+      ease: 'easeOut',
+    },
+    exit: {
+      duration: 0,
+      delay: 0,
+    },
+  }
+
   return (
-    <Card className="flex flex-col overflow-hidden pt-0">
-      <CardHeader className="flex-none space-y-0 px-6 py-4">
-        <CardTitle className="text-xl">{person.name}</CardTitle>
-      </CardHeader>
-      <CardContent className="flex-1 px-6">
-        <div className="space-y-1">
-          <p className="text-sm text-gray-600">
-            <span className="font-medium">{dict.people.gender}:</span>{' '}
-            {getGenderTranslation(person.gender)}
-          </p>
-          <p className="text-sm text-gray-600">
-            <span className="font-medium">{dict.people.age}:</span>{' '}
-            {getAgeTranslation(person.age)}
-          </p>
-          <p className="text-sm text-gray-600">
-            <span className="font-medium">{dict.people.eye_color}:</span>{' '}
-            {getColorTranslation(person.eye_color)}
-          </p>
-          <p className="text-sm text-gray-600">
-            <span className="font-medium">{dict.people.hair_color}:</span>{' '}
-            {getColorTranslation(person.hair_color)}
-          </p>
-          <p className="text-sm text-gray-600">
-            <span className="font-medium">{dict.people.species}:</span>{' '}
-            {species?.name
-              ? getSpeciesTranslation(species.name)
-              : dict.people.unknown}
-          </p>
-        </div>
-      </CardContent>
-    </Card>
+    <motion.div
+      initial={{ opacity: 0, y: 15 }}
+      animate={{ opacity: 1, y: 0 }}
+      exit={{ opacity: 0, x: -10 }}
+      transition={transitionConfig}
+      layout
+    >
+      <Card className="flex flex-col overflow-hidden pt-0">
+        <CardHeader className="flex-none space-y-0 px-6 py-4">
+          <CardTitle className="text-xl">{person.name}</CardTitle>
+        </CardHeader>
+        <CardContent className="flex-1 px-6">
+          <div className="space-y-1">
+            <p className="text-sm text-gray-600">
+              <span className="font-medium">{dict.people.gender}:</span>{' '}
+              {getGenderTranslation(person.gender)}
+            </p>
+            <p className="text-sm text-gray-600">
+              <span className="font-medium">{dict.people.age}:</span>{' '}
+              {getAgeTranslation(person.age)}
+            </p>
+            <p className="text-sm text-gray-600">
+              <span className="font-medium">{dict.people.eye_color}:</span>{' '}
+              {getColorTranslation(person.eye_color)}
+            </p>
+            <p className="text-sm text-gray-600">
+              <span className="font-medium">{dict.people.hair_color}:</span>{' '}
+              {getColorTranslation(person.hair_color)}
+            </p>
+            <p className="text-sm text-gray-600">
+              <span className="font-medium">{dict.people.species}:</span>{' '}
+              {species?.name
+                ? getSpeciesTranslation(species.name)
+                : dict.people.unknown}
+            </p>
+          </div>
+        </CardContent>
+      </Card>
+    </motion.div>
   )
 }

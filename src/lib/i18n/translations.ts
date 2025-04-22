@@ -60,6 +60,7 @@ export interface Translation {
     late_teens: string
     really_old: string
     na: string
+    search_placeholder: string
     genders: {
       Male: string
       Female: string

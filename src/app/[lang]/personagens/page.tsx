@@ -1,15 +1,18 @@
 'use client'
 
 import { motion } from 'framer-motion'
+import { useQueryState } from 'nuqs'
 
+import { Input } from '@/components/ui/input'
 import { useLanguage } from '@/lib/i18n/language-context'
-import { getPeople } from '@/services/people'
+import { filterPeople } from '@/services/people'
 
 import { CharactersGrid } from './characters-grid'
 
-export default function CharactersPage() {
-  const { people } = getPeople()
+function CharactersPage() {
+  const [search, setSearch] = useQueryState('search', { defaultValue: '' })
   const { dictionary } = useLanguage()
+  const { people } = filterPeople({ search: search || '' })
 
   return (
     <main className="min-h-screen py-8 md:py-16">
@@ -28,9 +31,20 @@ export default function CharactersPage() {
           >
             {dictionary.people.collection}
           </motion.h2>
+
+          <Input
+            placeholder={dictionary.people.search_placeholder}
+            className="mb-4"
+            onChange={(e) => {
+              setSearch(e.target.value)
+            }}
+          />
+
           <CharactersGrid characters={people} />
         </motion.section>
       </div>
     </main>
   )
 }
+
+export default CharactersPage
