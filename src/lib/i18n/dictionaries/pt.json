@@ -41,6 +41,7 @@
     "running_time_tooltip": "Duração total do filme",
     "rt_score": "Pontuação Rotten Tomatoes",
     "rt_score_tooltip": "Pontuação dos críticos no Rotten Tomatoes",
+    "search_placeholder": "Buscar filmes...",
     "titles": {
       "2baf70d1-42bb-4437-b551-e5fed5a87abe": "Castelo no Céu",
       "12cfb892-aac0-4c5b-94af-521852e46d6a": "Túmulo dos Vagalumes",
@@ -146,5 +147,9 @@
     "title": "Página Não Encontrada",
     "description": "Parece que você se perdeu no reino dos espíritos! Esta página não existe em nosso mundo.",
     "return_home": "Voltar ao Início"
+  },
+  "footer": {
+    "created_with_love": "Criado com ❤️ por Caique Morales",
+    "all_rights_reserved": "© {year} Ghibli Wiki. Todos os direitos reservados."
   }
 }

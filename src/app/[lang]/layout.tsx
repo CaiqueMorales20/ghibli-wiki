@@ -2,6 +2,7 @@ import '@/app/globals.css'
 
 // eslint-disable-next-line
 import { Nunito, PT_Sans } from 'next/font/google'
+import { NuqsAdapter } from 'nuqs/adapters/next/app'
 
 import { Footer } from '@/components/core/footer/footer'
 import { Header } from '@/components/core/header/header'
@@ -59,9 +60,11 @@ export default async function LocaleLayout({
       >
         <div className="texture" />
         <LanguageProvider dictionary={dictionary} locale={validLang}>
-          <Header />
-          {children}
-          <Footer />
+          <NuqsAdapter>
+            <Header />
+            {children}
+            <Footer />
+          </NuqsAdapter>
         </LanguageProvider>
       </body>
     </html>

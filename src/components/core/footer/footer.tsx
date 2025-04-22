@@ -4,8 +4,12 @@ import { motion } from 'framer-motion'
 import { Github, Instagram, Linkedin } from 'lucide-react'
 
 import { Separator } from '@/components/ui/separator'
+import { useLanguage } from '@/lib/i18n/language-context'
 
 export const Footer = () => {
+  const { dictionary } = useLanguage()
+  const currentYear = new Date().getFullYear()
+
   return (
     <motion.footer
       initial={{ opacity: 0, y: 20 }}
@@ -43,10 +47,13 @@ export const Footer = () => {
           </a>
         </div>
         <p className="text-muted-foreground px-4 text-center text-xs sm:text-sm">
-          Created with ❤️ by Caique Morales
+          {dictionary.footer.created_with_love}
         </p>
         <p className="text-muted-foreground px-4 text-center text-xs sm:text-sm">
-          © {new Date().getFullYear()} Ghibli Wiki. All rights reserved.
+          {dictionary.footer.all_rights_reserved.replace(
+            '{year}',
+            currentYear.toString(),
+          )}
         </p>
       </div>
     </motion.footer>

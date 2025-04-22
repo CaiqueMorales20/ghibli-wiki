@@ -27,6 +27,7 @@
     "running_time_tooltip": "Total duration of the film",
     "rt_score": "Rotten Tomatoes Score",
     "rt_score_tooltip": "Critic score on Rotten Tomatoes",
+    "search_placeholder": "Search films...",
     "titles": {
       "2baf70d1-42bb-4437-b551-e5fed5a87abe": "Castle in the Sky",
       "12cfb892-aac0-4c5b-94af-521852e46d6a": "Grave of the Fireflies",
@@ -146,5 +147,9 @@
       "name": "Caique Morales",
       "description": ", a passionate developer and Studio Ghibli enthusiast. It's a personal project built to share knowledge and appreciation for Studio Ghibli's incredible works."
     }
+  },
+  "footer": {
+    "created_with_love": "Created with ❤️ by Caique Morales",
+    "all_rights_reserved": "© {year} Ghibli Wiki. All rights reserved."
   }
 }

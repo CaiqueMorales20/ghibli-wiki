@@ -41,6 +41,7 @@ export interface Translation {
     running_time_tooltip: string
     rt_score: string
     rt_score_tooltip: string
+    search_placeholder: string
     titles: Record<string, string>
     descriptions: Record<string, string>
   }
@@ -100,5 +101,9 @@ export interface Translation {
     title: string
     description: string
     return_home: string
+  }
+  footer: {
+    created_with_love: string
+    all_rights_reserved: string
   }
 }

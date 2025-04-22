@@ -1,7 +1,5 @@
 'use client'
 
-import Image from 'next/image'
-
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Person } from '@/interfaces'
 import { useLanguage } from '@/lib/i18n/language-context'
@@ -77,14 +75,6 @@ export function CharacterCard({ person }: { person: Person }) {
 
   return (
     <Card className="flex flex-col overflow-hidden pt-0">
-      <div className="relative h-48 w-full flex-none">
-        <Image
-          src={'/people/haku.png'}
-          alt={person.name}
-          fill
-          className="object-cover"
-        />
-      </div>
       <CardHeader className="flex-none space-y-0 px-6 py-4">
         <CardTitle className="text-xl">{person.name}</CardTitle>
       </CardHeader>
